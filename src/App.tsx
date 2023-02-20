@@ -65,7 +65,7 @@ function App() {
           </ButtonLi>
         </MenuBar>
       </Header>
-      <MenuDivBar style={{ display: isClicked ? "block" : "none" , position: "fixed", marginTop: "53px"}}>
+      <MenuDivBar style={{ display: isClicked ? "block" : "none" , position: "fixed", marginTop: "50px"}}>
         <UlDiv>
           <LineDiv />
           <ButtonLi  onClick={HomeClick}>
@@ -139,12 +139,22 @@ function App() {
         <ProjectsDiv ref={refP}>
           <AboutDivH3>Projects</AboutDivH3>
           <UnderDiv />
-          <AboutDivP>
+          <ProjectDivP>
             Here you will find some of the personal projects that I created with
             each project containing its own case study. For more please check my
             Github.
-          </AboutDivP>
-
+          </ProjectDivP>
+          <Project>
+            <Img src="/assets/preview.jpg" alt="" />
+            <ImgButton
+              onClick={() =>
+                window.open("https://generate-password-now.netlify.app/")
+              }
+            >
+              The Password Generator
+            </ImgButton>
+          </Project>
+          <UnderDiv />
           <Project>
             <Img src="/assets/image1.png" alt="" />
             <ImgButton
@@ -363,6 +373,7 @@ const ImgButton = styled.button`
   font-weight: bold;
   font-size: 18px;
   transition: all 0.3s;
+  color: black;
   &:hover {
     color: #797878;
   }
@@ -424,6 +435,7 @@ const AboutDivH3 = styled.h3`
     font-size: 30px;
   }
 `;
+
 const ContactDivH2 = styled.h2`
   margin-bottom: 15px;
   @media (width>1200px) {
@@ -439,6 +451,16 @@ const AboutDivP = styled.p`
     font-size: 20px;
   }
 `;
+
+const ProjectDivP = styled(AboutDivP)`
+
+  @media (width>1200px) {
+    font-size: 20px;
+    width: 70%;
+    margin: 15px auto
+  }
+
+`
 const ContactDivP = styled(AboutDivP)`
   margin-top: 15px;
   margin-bottom: 5px;
@@ -537,6 +559,7 @@ const LiDiv = styled.li`
   margin-right: 10px;
   list-style: none;
   transition: all 0.3s;
+  color: black;
   &:hover {
     color: darkgray;
   }
