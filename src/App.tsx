@@ -145,6 +145,16 @@ function App() {
             Github.
           </ProjectDivP>
           <Project>
+            <Img src="/assets/audpreview.jpg" alt="" />
+            <ImgButton
+              onClick={() =>
+                window.open("https://audiophile-web-app.netlify.app/")
+              }
+            >
+              Audiophile Ecommerce Website
+            </ImgButton>
+          </Project>
+          <Project>
             <Img src="/assets/preview.jpg" alt="" />
             <ImgButton
               onClick={() =>
