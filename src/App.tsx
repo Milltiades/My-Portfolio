@@ -144,6 +144,20 @@ function App() {
             each project containing its own case study. For more please check my
             Github.
           </ProjectDivP>
+<ProDiv>
+  <ProDivInside>
+          <Project>
+            <Img src="/assets/previewClock.jpg" alt="" />
+            <ImgButton
+              onClick={() =>
+                window.open("https://awesome-clock-app.netlify.app/")
+              }
+            >
+              The Clock App
+            </ImgButton>
+          </Project>
+          <UnderDiv /></ProDivInside>
+          <ProDivInside>
           <Project>
             <Img src="/assets/audpreview.jpg" alt="" />
             <ImgButton
@@ -154,7 +168,8 @@ function App() {
               Audiophile Ecommerce Website
             </ImgButton>
           </Project>
-          <UnderDiv />
+          <UnderDiv /></ProDivInside>
+          <ProDivInside>
           <Project>
             <Img src="/assets/preview.jpg" alt="" />
             <ImgButton
@@ -165,7 +180,8 @@ function App() {
               The Password Generator
             </ImgButton>
           </Project>
-          <UnderDiv />
+          <UnderDiv /></ProDivInside>
+          <ProDivInside>
           <Project>
             <Img src="/assets/image1.png" alt="" />
             <ImgButton
@@ -176,7 +192,8 @@ function App() {
               The Movies App
             </ImgButton>
           </Project>
-          <UnderDiv />
+          <UnderDiv /></ProDivInside>
+          <ProDivInside>
           <Project>
             <Img src="/assets/image2.png" alt="" />
             <ImgButton
@@ -185,7 +202,8 @@ function App() {
               The Planets App
             </ImgButton>
           </Project>
-          <UnderDiv />
+          <UnderDiv /></ProDivInside>
+          <ProDivInside>
           <Project>
             <Img src="/assets/image3.png" alt="" />
             <ImgButton
@@ -196,8 +214,12 @@ function App() {
               The DevFinder App
             </ImgButton>
           </Project>
-          <UnderDiv />
+          <UnderDiv /></ProDivInside>
+
+          </ProDiv>
+
         </ProjectsDiv>
+
         <ContactDiv ref={refC}>
           <ContactDivH2>Contact</ContactDivH2>
           <UnderDiv />
@@ -258,6 +280,20 @@ function App() {
 }
 
 export default App;
+
+const ProDivInside = styled.div`
+@media (width > 1200px) {
+  width: 50%;
+}
+
+`
+
+const ProDiv = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+`
 
 const LastDiv = styled.div`
   @media (width>1200px) {
@@ -364,9 +400,13 @@ const Project = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  @media (width > 1200px) {
+    
+  }
 `;
 const Img = styled.img`
-  width: 80%;
+  width: 100%;
   height: auto;
   border-radius: 5px;
   box-shadow: -50px -50px 5px -40px darkgray, 50px 50px 5px -40px darkgray;
@@ -467,7 +507,7 @@ const ProjectDivP = styled(AboutDivP)`
 
   @media (width>1200px) {
     font-size: 20px;
-    width: 70%;
+    width: 60%;
     margin: 15px auto
   }
 
