@@ -13,29 +13,25 @@ function App() {
 
   const AboutCLick = () => {
     ref.current.scrollIntoView({ behavior: "smooth" });
-    setIsClicked(false)
+    setIsClicked(false);
   };
   const ContactCLick = () => {
     refC.current.scrollIntoView({ behavior: "smooth" });
-    setIsClicked(false)
+    setIsClicked(false);
   };
   const ProjectsCLick = () => {
     refP?.current.scrollIntoView({ behavior: "smooth" });
-    setIsClicked(false)
+    setIsClicked(false);
   };
   const HomeClick = () => {
     refH.current.scrollIntoView({ behavior: "smooth" });
-    setIsClicked(false)
-  }
-
-
-   
-
+    setIsClicked(false);
+  };
 
   return (
     <div style={{ overflow: isClicked ? "hidden" : "auto" }}>
       <GlobalStyles />
-      <Header  style={{position: "fixed"}}>
+      <Header style={{ position: "fixed" }}>
         <LogoDiv>
           <h2>G.</h2>
         </LogoDiv>
@@ -65,10 +61,16 @@ function App() {
           </ButtonLi>
         </MenuBar>
       </Header>
-      <MenuDivBar style={{ display: isClicked ? "block" : "none" , position: "fixed", marginTop: "50px"}}>
+      <MenuDivBar
+        style={{
+          display: isClicked ? "block" : "none",
+          position: "fixed",
+          marginTop: "50px",
+        }}
+      >
         <UlDiv>
           <LineDiv />
-          <ButtonLi  onClick={HomeClick}>
+          <ButtonLi onClick={HomeClick}>
             <LiDiv>home</LiDiv>
           </ButtonLi>
           <LineDiv />
@@ -77,7 +79,7 @@ function App() {
           </ButtonLi>
           <LineDiv />
           <ButtonLi>
-            <LiDiv onClick={ ProjectsCLick}>projects</LiDiv>
+            <LiDiv onClick={ProjectsCLick}>projects</LiDiv>
           </ButtonLi>
           <LineDiv />
           <ButtonLi onClick={ContactCLick}>
@@ -85,196 +87,212 @@ function App() {
           </ButtonLi>
           <LineDiv />
         </UlDiv>
-      
-        
       </MenuDivBar>
-      
-        <MainDiv ref={refH}>
-          <MainText>
-            <MainTextH1>Hey, I'm Gedeon Kakulia</MainTextH1>
-            <MainTextP>
-              A Frontend focused Web Developer building the Frontend of Websites
-              and Web Applications that leads to the success of the overall
-              product
-            </MainTextP>
-            <MainButton
-              onClick={() =>
-                window.open("https://github.com/Milltiades?tab=repositories")
-              }
-            >
-              <MainButtonP>projects</MainButtonP>
-            </MainButton>
-          </MainText>
-        </MainDiv>
-        <AboutDiv ref={ref}>
-          <AboutDivH3>About Me</AboutDivH3>
-          <UnderDiv />
-          <AboutDivP>
-            Here you will find more information about me, what I do, and my
-            current skills mostly in terms of programming and technology
-          </AboutDivP>
-          <AboutDivH3>Get to know me!</AboutDivH3>
-          <UnderDiv />
-          <AboutDivP>
-            I'm a Frontend Web Developer building the Front-end of Websites and
-            Web Applications that leads to the success of the overall product.
-            Check out some of my work in the Projects section. I'm open to Job
-            opportunities where I can contribute, learn and grow. If you have a
-            good opportunity that matches my skills and experience then don't
-            hesitate to contact me.
-          </AboutDivP>
 
-          <AboutDivH3>my skills</AboutDivH3>
-          <UnderDiv />
-          <SkillsDiv>
-            <Skill>html</Skill>
-            <Skill>css</Skill>
-            <Skill>sass</Skill>
-            <Skill>javascript</Skill>
-            <Skill>typescript</Skill>
-            <Skill>react</Skill>
-            <Skill>styled components</Skill>
-          </SkillsDiv>
-        </AboutDiv>
-        <ProjectsDiv ref={refP}>
-          <AboutDivH3>Projects</AboutDivH3>
-          <UnderDiv />
-          <ProjectDivP>
-            Here you will find some of the personal projects that I created with
-            each project containing its own case study. For more please check my
-            Github.
-          </ProjectDivP>
-<ProDiv>
-  <ProDivInside>
-          <Project>
-            <Img src="/assets/previewClock.jpg" alt="" />
-            <ImgButton
-              onClick={() =>
-                window.open("https://awesome-clock-app.netlify.app/")
-              }
-            >
-              The Clock App
-            </ImgButton>
-          </Project>
-          <UnderDiv /></ProDivInside>
-          <ProDivInside>
-          <Project>
-            <Img src="/assets/audpreview.jpg" alt="" />
-            <ImgButton
-              onClick={() =>
-                window.open("https://audiophile-web-app.netlify.app/")
-              }
-            >
-              Audiophile Ecommerce Website
-            </ImgButton>
-          </Project>
-          <UnderDiv /></ProDivInside>
-          <ProDivInside>
-          <Project>
-            <Img src="/assets/preview.jpg" alt="" />
-            <ImgButton
-              onClick={() =>
-                window.open("https://generate-password-now.netlify.app/")
-              }
-            >
-              The Password Generator
-            </ImgButton>
-          </Project>
-          <UnderDiv /></ProDivInside>
-          <ProDivInside>
-          <Project>
-            <Img src="/assets/image1.png" alt="" />
-            <ImgButton
-              onClick={() =>
-                window.open("https://awesome-movies-app-netlify.netlify.app/")
-              }
-            >
-              The Movies App
-            </ImgButton>
-          </Project>
-          <UnderDiv /></ProDivInside>
-          <ProDivInside>
-          <Project>
-            <Img src="/assets/image2.png" alt="" />
-            <ImgButton
-              onClick={() => window.open("https://awesomeplanets.netlify.app/")}
-            >
-              The Planets App
-            </ImgButton>
-          </Project>
-          <UnderDiv /></ProDivInside>
-          <ProDivInside>
-          <Project>
-            <Img src="/assets/image3.png" alt="" />
-            <ImgButton
-              onClick={() =>
-                window.open("https://awesome-devfinder.netlify.app/")
-              }
-            >
-              The DevFinder App
-            </ImgButton>
-          </Project>
-          <UnderDiv /></ProDivInside>
+      <MainDiv ref={refH}>
+        <MainText>
+          <MainTextH1>Hey, I'm Gedeon Kakulia</MainTextH1>
+          <MainTextP>
+            A Frontend focused Web Developer building the Frontend of Websites
+            and Web Applications that leads to the success of the overall
+            product
+          </MainTextP>
+          <MainButton
+            onClick={() =>
+              window.open("https://github.com/Milltiades?tab=repositories")
+            }
+          >
+            <MainButtonP>projects</MainButtonP>
+          </MainButton>
+        </MainText>
+      </MainDiv>
+      <AboutDiv ref={ref}>
+        <AboutDivH3>About Me</AboutDivH3>
+        <UnderDiv />
+        <AboutDivP>
+          Here you will find more information about me, what I do, and my
+          current skills mostly in terms of programming and technology
+        </AboutDivP>
+        <AboutDivH3>Get to know me!</AboutDivH3>
+        <UnderDiv />
+        <AboutDivP>
+          I'm a Frontend Web Developer building the Front-end of Websites and
+          Web Applications that leads to the success of the overall product.
+          Check out some of my work in the Projects section. I'm open to Job
+          opportunities where I can contribute, learn and grow. If you have a
+          good opportunity that matches my skills and experience then don't
+          hesitate to contact me.
+        </AboutDivP>
 
-          </ProDiv>
-
-        </ProjectsDiv>
-
-        <ContactDiv ref={refC}>
-          <ContactDivH2>Contact</ContactDivH2>
-          <UnderDiv />
-          <ContactDivP>
-            Feel free to Contact me, let me get you a beautiful website.
-          </ContactDivP>
-          <ContactDivP>gigakakulia2017@gmail.com</ContactDivP>
-          <ContactDivP>+995 568 785 858</ContactDivP>
-        </ContactDiv>
-        <Footer>
-          <FooterH3>gedeon kakulia</FooterH3>
-          <UnderDivF />
-          <LastDiv>
-            <FooterP>
-              A Frontend focused Web Developer building the Frontend of Websites
-              and Web Applications that leads to the success of the overall
-              product
-            </FooterP>
-            <SocialMedia>
-              <LiSocial
+        <AboutDivH3>my skills</AboutDivH3>
+        <UnderDiv />
+        <SkillsDiv>
+          <Skill>html</Skill>
+          <Skill>css</Skill>
+          <Skill>sass</Skill>
+          <Skill>javascript</Skill>
+          <Skill>typescript</Skill>
+          <Skill>react</Skill>
+          <Skill>styled components</Skill>
+        </SkillsDiv>
+      </AboutDiv>
+      <ProjectsDiv ref={refP}>
+        <AboutDivH3>Projects</AboutDivH3>
+        <UnderDiv />
+        <ProjectDivP>
+          Here you will find some of the personal projects that I created with
+          each project containing its own case study. For more please check my
+          Github.
+        </ProjectDivP>
+        <ProDiv>
+        <ProDivInside>
+            <Project>
+              <Img src="/assets/interactive-preview.jpg" alt="" />
+              <ImgButton
                 onClick={() =>
-                  window.open(
-                    "https://www.facebook.com/profile.php?id=100002705300177"
-                  )
+                  window.open("https://interactive-plastic-card.netlify.app/")
                 }
               >
-                <img src="/assets/facebook.svg" alt="" />
-              </LiSocial>
-              <LiSocial
+                Interactive Card
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+          <ProDivInside>
+            <Project>
+              <Img src="/assets/previewClock.jpg" alt="" />
+              <ImgButton
                 onClick={() =>
-                  window.open("https://www.instagram.com/gigakakulia/")
+                  window.open("https://awesome-clock-app.netlify.app/")
                 }
               >
-                <img src="/assets/instagram.svg" alt="" />
-              </LiSocial>
-              <LiSocial
+                The Clock App
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+          <ProDivInside>
+            <Project>
+              <Img src="/assets/audpreview.jpg" alt="" />
+              <ImgButton
                 onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/gedeon-kakulia-424796239/"
-                  )
+                  window.open("https://audiophile-web-app.netlify.app/")
                 }
               >
-                <img src="/assets/linkedin.svg" alt="" />
-              </LiSocial>
-              <LiSocial
-                onClick={() => window.open("https://github.com/Milltiades")}
+                Audiophile Ecommerce Website
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+          <ProDivInside>
+            <Project>
+              <Img src="/assets/preview.jpg" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://generate-password-now.netlify.app/")
+                }
               >
-                <img src="/assets/github.svg" alt="" />
-              </LiSocial>
-            </SocialMedia>
-          </LastDiv>
-          <FooterUnder />
-          <FooterPLast>© Copyright 2023. Made by Gedeon Kakulia</FooterPLast>
-        </Footer>
-      
+                The Password Generator
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+          <ProDivInside>
+            <Project>
+              <Img src="/assets/image1.png" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://awesome-movies-app-netlify.netlify.app/")
+                }
+              >
+                The Movies App
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+          <ProDivInside>
+            <Project>
+              <Img src="/assets/image2.png" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://awesomeplanets.netlify.app/")
+                }
+              >
+                The Planets App
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+          <ProDivInside>
+            <Project>
+              <Img src="/assets/image3.png" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://awesome-devfinder.netlify.app/")
+                }
+              >
+                The DevFinder App
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+        </ProDiv>
+      </ProjectsDiv>
+
+      <ContactDiv ref={refC}>
+        <ContactDivH2>Contact</ContactDivH2>
+        <UnderDiv />
+        <ContactDivP>
+          Feel free to Contact me, let me get you a beautiful website.
+        </ContactDivP>
+        <ContactDivP>gigakakulia2017@gmail.com</ContactDivP>
+        <ContactDivP>+995 568 785 858</ContactDivP>
+      </ContactDiv>
+      <Footer>
+        <FooterH3>gedeon kakulia</FooterH3>
+        <UnderDivF />
+        <LastDiv>
+          <FooterP>
+            A Frontend focused Web Developer building the Frontend of Websites
+            and Web Applications that leads to the success of the overall
+            product
+          </FooterP>
+          <SocialMedia>
+            <LiSocial
+              onClick={() =>
+                window.open(
+                  "https://www.facebook.com/profile.php?id=100002705300177"
+                )
+              }
+            >
+              <img src="/assets/facebook.svg" alt="" />
+            </LiSocial>
+            <LiSocial
+              onClick={() =>
+                window.open("https://www.instagram.com/gigakakulia/")
+              }
+            >
+              <img src="/assets/instagram.svg" alt="" />
+            </LiSocial>
+            <LiSocial
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/gedeon-kakulia-424796239/"
+                )
+              }
+            >
+              <img src="/assets/linkedin.svg" alt="" />
+            </LiSocial>
+            <LiSocial
+              onClick={() => window.open("https://github.com/Milltiades")}
+            >
+              <img src="/assets/github.svg" alt="" />
+            </LiSocial>
+          </SocialMedia>
+        </LastDiv>
+        <FooterUnder />
+        <FooterPLast>© Copyright 2023. Made by Gedeon Kakulia</FooterPLast>
+      </Footer>
     </div>
   );
 }
@@ -282,18 +300,17 @@ function App() {
 export default App;
 
 const ProDivInside = styled.div`
-@media (width > 1200px) {
-  width: 50%;
-}
-
-`
+  @media (width > 1200px) {
+    width: 50%;
+  }
+`;
 
 const ProDiv = styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-width: 100%;
-`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+`;
 
 const LastDiv = styled.div`
   @media (width>1200px) {
@@ -306,7 +323,7 @@ const LastDiv = styled.div`
 
 const MenuBar = styled.ul`
   display: none;
-  
+
   @media (width > 1200px) {
     display: flex;
   }
@@ -402,7 +419,6 @@ const Project = styled.div`
   align-items: center;
   width: 100%;
   @media (width > 1200px) {
-    
   }
 `;
 const Img = styled.img`
@@ -504,14 +520,12 @@ const AboutDivP = styled.p`
 `;
 
 const ProjectDivP = styled(AboutDivP)`
-
   @media (width>1200px) {
     font-size: 20px;
     width: 60%;
-    margin: 15px auto
+    margin: 15px auto;
   }
-
-`
+`;
 const ContactDivP = styled(AboutDivP)`
   margin-top: 15px;
   margin-bottom: 5px;
@@ -626,7 +640,6 @@ const MenuDivBar = styled.div`
   position: absolute;
   z-index: 100;
   height: 50vh;
-  
 `;
 
 const LogoDiv = styled.div`
@@ -657,7 +670,7 @@ const Header = styled.div`
   padding: 5px 10px 5px 10px;
   background: #ffffff;
   @media (width > 1200px) {
-padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
   }
 `;
 
