@@ -33,7 +33,7 @@ function App() {
       <GlobalStyles />
       <Header style={{ position: "fixed" }}>
         <LogoDiv>
-          <h2>G.</h2>
+          <LogoButton onClick={() => window.location.reload()}>G. </LogoButton>
         </LogoDiv>
         <ButtonMenu onClick={() => setIsClicked(!isClicked)}>
           <div style={{ display: !isClicked ? "flex" : "none" }}>
@@ -133,7 +133,10 @@ function App() {
           <Skill>javascript</Skill>
           <Skill>typescript</Skill>
           <Skill>react</Skill>
+          <Skill>Redux</Skill>
           <Skill>styled components</Skill>
+          <Skill>Git</Skill>
+          <Skill>GitHub</Skill>
         </SkillsDiv>
       </AboutDiv>
       <ProjectsDiv ref={refP}>
@@ -298,6 +301,18 @@ function App() {
 }
 
 export default App;
+
+const LogoButton = styled.button`
+border: none;
+background: transparent;
+color: white;
+font-size: 25px;
+cursor: pointer;
+transition: all .3s ease;
+:hover {
+  background: #ff4242;
+}
+`
 
 const ProDivInside = styled.div`
   @media (width > 1200px) {
@@ -645,11 +660,15 @@ const MenuDivBar = styled.div`
 const LogoDiv = styled.div`
   padding: 5px 10px;
   background: red;
+  transition: all .3s ease;
 
   color: white;
   @media (width> 1200px) {
     margin-left: 15px;
   }
+  :hover {
+  background: #ff4242;
+}
 `;
 
 const ButtonMenu = styled.button`
