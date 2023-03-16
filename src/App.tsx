@@ -10,6 +10,7 @@ function App() {
   const refC = useRef<any>();
   const refP = useRef<any>();
   const refH = useRef<any>();
+  const refL = useRef<any>();
 
   const AboutCLick = () => {
     ref.current.scrollIntoView({ behavior: "smooth" });
@@ -31,9 +32,14 @@ function App() {
   return (
     <div style={{ overflow: isClicked ? "hidden" : "auto" }}>
       <GlobalStyles />
-      <Header style={{ position: "fixed" }}>
+      <Header 
+      ref={refH}
+      style={{ position: "fixed" }}>
         <LogoDiv>
-          <LogoButton onClick={() => window.location.reload()}>G. </LogoButton>
+          <LogoButton onClick={() => {
+            refH.current.scrollIntoView({ behavior : "smooth"})
+            setIsClicked(false);
+          }}>G. </LogoButton>
         </LogoDiv>
         <ButtonMenu onClick={() => setIsClicked(!isClicked)}>
           <div style={{ display: !isClicked ? "flex" : "none" }}>
