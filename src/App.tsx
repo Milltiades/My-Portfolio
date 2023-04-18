@@ -140,6 +140,10 @@ function App() {
           <Skill>react</Skill>
           <Skill>Redux</Skill>
           <Skill>styled components</Skill>
+          <Skill>Three.js</Skill>
+          <Skill>Vite</Skill>
+          <Skill>Framer Motion</Skill>
+          <Skill>Parallax</Skill>
           <Skill>Git</Skill>
           <Skill>GitHub</Skill>
         </SkillsDiv>
@@ -337,6 +341,7 @@ transition: all .3s ease;
 const ProDivInside = styled.div`
   @media (width > 1200px) {
     width: 50%;
+    
   }
 `;
 
@@ -714,10 +719,10 @@ const Header = styled.div`
 `;
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
   :root {
-  font-family: 'Bebas Neue', cursive;
-  font-weight: bold;
+    font-family: 'Fjalla One', sans-serif;
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
