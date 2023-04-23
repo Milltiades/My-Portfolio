@@ -160,6 +160,20 @@ function App() {
         <ProDivInside>
           
           <Project>
+            <Img src="/assets/lll.png" alt="" />
+            <ImgButton
+              onClick={() =>
+                window.open("https://remarkable-figolla-45b3d5.netlify.app/")
+              }
+            >
+              L-earn
+            </ImgButton>
+          </Project>
+          <UnderDiv />
+        </ProDivInside>
+        <ProDivInside>
+          
+          <Project>
             <Img src="/assets/converterImg.PNG" alt="" />
             <ImgButton
               onClick={() =>
@@ -339,6 +353,7 @@ transition: all .3s ease;
 `
 
 const ProDivInside = styled.div`
+width: 100%;
   @media (width > 1200px) {
     width: 50%;
     
