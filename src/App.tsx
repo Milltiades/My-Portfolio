@@ -3,7 +3,18 @@ import styled, { createGlobalStyle } from "styled-components";
 import Close from "./components/Close";
 import Menu from "./components/Menu";
 
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import {  Autoplay } from "swiper";
+import "swiper/css";
+
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
+
 function App() {
+
+  // const swiper = useSwiper();
+  // const [slider, setSlider] = useState(swiper);
+
   const [isClicked, setIsClicked] = useState(false);
 
   const ref = useRef<any>();
@@ -31,14 +42,16 @@ function App() {
   return (
     <div style={{ overflow: isClicked ? "hidden" : "auto" }}>
       <GlobalStyles />
-      <Header 
-      ref={refH}
-      style={{ position: "fixed" }}>
+      <Header ref={refH} style={{ position: "fixed" }}>
         <LogoDiv>
-          <LogoButton onClick={() => {
-            refH.current.scrollIntoView({ behavior : "smooth"})
-            setIsClicked(false);
-          }}>G. </LogoButton>
+          <LogoButton
+            onClick={() => {
+              refH.current.scrollIntoView({ behavior: "smooth" });
+              setIsClicked(false);
+            }}
+          >
+            G.{" "}
+          </LogoButton>
         </LogoDiv>
         <ButtonMenu onClick={() => setIsClicked(!isClicked)}>
           <div style={{ display: !isClicked ? "flex" : "none" }}>
@@ -157,36 +170,33 @@ function App() {
           Github.
         </ProjectDivP>
         <ProDiv>
-        <ProDivInside>
-          
-          <Project>
-            <Img src="/assets/lll.png" alt="" />
-            <ImgButton
-              onClick={() =>
-                window.open("https://remarkable-figolla-45b3d5.netlify.app/")
-              }
-            >
-              L-earn
-            </ImgButton>
-          </Project>
-          <UnderDiv />
-        </ProDivInside>
-        <ProDivInside>
-          
-          <Project>
-            <Img src="/assets/converterImg.PNG" alt="" />
-            <ImgButton
-              onClick={() =>
-                window.open("https://youtube-mp3-converter.netlify.app/")
-              }
-            >
-              Youtube Mp3 Converter
-            </ImgButton>
-          </Project>
-          <UnderDiv />
-        </ProDivInside>
-        <ProDivInside>
-          
+          {/* <ProDivInside>
+            <Project>
+              <Img src="/assets/lll.png" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://remarkable-figolla-45b3d5.netlify.app/")
+                }
+              >
+                L-earn
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+          <ProDivInside>
+            <Project>
+              <Img src="/assets/converterImg.PNG" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://youtube-mp3-converter.netlify.app/")
+                }
+              >
+                Youtube Mp3 Converter
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+          <ProDivInside>
             <Project>
               <Img src="/assets/interactive-preview.jpg" alt="" />
               <ImgButton
@@ -276,8 +286,168 @@ function App() {
               </ImgButton>
             </Project>
             <UnderDiv />
-          </ProDivInside>
+          </ProDivInside> */}
         </ProDiv>
+
+        <Swiper
+          modules={[ Autoplay]}
+          autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+          spaceBetween={50}
+          slidesPerView={window.innerWidth < 500 ? 1 : 3}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+        <SwiperSlide>
+        <ProDivInside>
+            <Project>
+              <Img src="/assets/lll.png" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://remarkable-figolla-45b3d5.netlify.app/")
+                }
+              >
+                L-earn
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+        </SwiperSlide>
+     <SwiperSlide>
+     <ProDivInside>
+            <Project>
+              <Img src="/assets/converterImg.PNG" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://youtube-mp3-converter.netlify.app/")
+                }
+              >
+                Youtube Mp3 Converter
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+     </SwiperSlide>
+
+<SwiperSlide>
+
+<ProDivInside>
+            <Project>
+              <Img src="/assets/interactive-preview.jpg" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://interactive-plastic-card.netlify.app/")
+                }
+              >
+                Interactive Card
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+</SwiperSlide>
+
+<SwiperSlide>
+<ProDivInside>
+            <Project>
+              <Img src="/assets/previewClock.jpg" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://awesome-clock-app.netlify.app/")
+                }
+              >
+                The Clock App
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+</SwiperSlide>
+
+<SwiperSlide>
+<ProDivInside>
+            <Project>
+              <Img src="/assets/audpreview.jpg" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://audiophile-web-app.netlify.app/")
+                }
+              >
+                Audiophile Ecommerce Website
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+</SwiperSlide>
+
+<SwiperSlide>
+<ProDivInside>
+            <Project>
+              <Img src="/assets/preview.jpg" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://generate-password-now.netlify.app/")
+                }
+              >
+                The Password Generator
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+</SwiperSlide>
+
+<SwiperSlide>
+<ProDivInside>
+            <Project>
+              <Img src="/assets/image1.png" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://awesome-movies-app-netlify.netlify.app/")
+                }
+              >
+                The Movies App
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+
+</SwiperSlide>
+
+<SwiperSlide>
+<ProDivInside>
+            <Project>
+              <Img src="/assets/image2.png" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://awesomeplanets.netlify.app/")
+                }
+              >
+                The Planets App
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+
+</SwiperSlide>
+
+<SwiperSlide>
+<ProDivInside>
+            <Project>
+              <Img src="/assets/image3.png" alt="" />
+              <ImgButton
+                onClick={() =>
+                  window.open("https://awesome-devfinder.netlify.app/")
+                }
+              >
+                The DevFinder App
+              </ImgButton>
+            </Project>
+            <UnderDiv />
+          </ProDivInside>
+</SwiperSlide>
+
+
+        </Swiper>
       </ProjectsDiv>
 
       <ContactDiv ref={refC}>
@@ -341,23 +511,22 @@ function App() {
 export default App;
 
 const LogoButton = styled.button`
-border: none;
-background: transparent;
-color: white;
-font-size: 25px;
-cursor: pointer;
-transition: all .3s ease;
-:hover {
-  background: #ff4242;
-}
-`
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  :hover {
+    background: #ff4242;
+  }
+`;
 
 const ProDivInside = styled.div`
-width: 100%;
-  @media (width > 1200px) {
+  width: 100%;
+  /* @media (width > 1200px) {
     width: 50%;
-    
-  }
+  } */
 `;
 
 const ProDiv = styled.div`
@@ -700,15 +869,15 @@ const MenuDivBar = styled.div`
 const LogoDiv = styled.div`
   padding: 5px 10px;
   background: red;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   color: white;
   @media (width> 1200px) {
     margin-left: 15px;
   }
   :hover {
-  background: #ff4242;
-}
+    background: #ff4242;
+  }
 `;
 
 const ButtonMenu = styled.button`
