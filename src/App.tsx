@@ -547,6 +547,7 @@ const LastDiv = styled.div`
 
 const MenuBar = styled.ul`
   display: none;
+  color: black;
 
   @media (width > 1200px) {
     display: flex;
@@ -678,6 +679,7 @@ const ProjectsDiv = styled.div`
   padding: 50px 40px;
   background: #e3e3e3;
   text-align: center;
+ z-index: -50;
   @media (width>1200px) {
     padding: 70px 200px;
   }
@@ -897,6 +899,7 @@ const Header = styled.div`
   justify-content: space-between;
   padding: 5px 10px 5px 10px;
   background: #ffffff;
+  z-index: 1000;
   @media (width > 1200px) {
     padding: 10px 10px 10px 10px;
   }
